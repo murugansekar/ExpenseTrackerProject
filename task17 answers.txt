@@ -1,0 +1,43 @@
+
+What are environment variables and what should we use it for?
+Environment variables are predetermined values that are typically used to provide the ability to configure a value in your code from outside of your application. Now environment variables are a concept supported by nodejs where we can pass certain configurations, certain values into our node application from outside, so we don't hardcode certain values into our node code, instead the values will be injected when our node server starts and that allows us to use different values in development and production and also to conveniently change the values in production without having to redeploy our entire code.
+
+What all thing should you do to prepare code for production?Explain each one of them and why we need it?
+Use environment variables : Avoid hard-coded values in your code
+Use production API keys : Dont use that testing Stripe API
+Reduce Error Output Details : DOnt send sensitive info to your servers
+Set Secure Response Headers : Implement best practices
+Add Asset compression : Reduce Response Size
+Configure Logging : Often handled by hosting provider. Stay up to date.
+Use SSL/TLS : Encypt Data in transit
+Use environment variables instead of hardcoding certain values like API keys, port numbers, passwords and so on into your code. Also make sure that if you are using some third party services like razorpay, that you use the production API keys and not the development keys, for example razorpay, which we used gave us a testing API key while that is obviously what we want to use as long as we test the application, as soon as we deploy it we want to use the production ready API and that is something that also depends on the third parties or on the third party APIs you might be using.
+
+
+
+
+Download the resource attached in the task
+Done 
+
+Understand that he is using a different code base which you have not worked on but understand the core fundamentals. They are the same.
+Done
+
+Why should we put the port number and mongodb connection string in env variable?
+In development, we use 3000 and we can basically use any number that is above the thousand range but in production, we want to let our server or our hosting provider set this port because that is in the end the thing, the service that does open our app to the web and that does configure all the network settings,so there we don't control the port number but the hosting provider does.In mongoose connection string we have some hardcoded values like the username and the password for this user and then also the default database. If we want to change anything there, well then we have to change it in the code and redeploy it.
+Additionally if we ever share this code with someone, they can see these credentials, in a real application, you can't change your passwords every time you share the code with some
+coworker or anything like that and therefore you want to use node environment variables here.
+
+What is process variable?What does process.env do?
+we can access environments variables on the process object, this is an object not defined by us but this is globally available in the node app, it's part of the node core runtime. Now on this process object, we have the very helpful env property and that is now an object with all the environment variables this node process knows. The process. env global variable is injected by the Node at runtime for your application to use and it represents the state of the system environment your application is in when it starts. For example, if the system has a PATH variable set, this will be made accessible to you through process.
+
+
+Stripe is a payment gateway provider like Razorpay. So whatever configuration is being done over here for stripe , you would have to do for razorpay as well. 
+Done
+
+
+What are the key security things which helmet provides. Can you explain a few?
+Used to secure headers by adding certain response headers to which you send back.
+
+
+Using console log for logging can make your application very slow.
+How does the udemy trainer configure morgan? Can you explain the flow and what logs will morgan provide
+Used to store access logs to a file.
