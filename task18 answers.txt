@@ -1,0 +1,27 @@
+
+What is SSL and how does it work exactly? [Favourite Interview Question]
+SSL uses port number 443, encrypting data exchanged between the browser and the server and authenticating the user. Therefore, when the communications between the web browser and server need to be secure, the browser automatically switches to SSL — that is, as long as the server has an SSL certificate installed.An SSL certificate is a file installed on a website's origin server. It's simply a data file containing the public key and the identity of the website owner, along with other information. Without an SSL certificate, a website's traffic can't be encrypted with TLS.
+
+Enable https like the way the udemy trainer does
+Defender not allowing, once deployed in aws will try again there
+
+How does heroku exactly work?
+Heroku is a cloud platform that lets companies build, deliver, monitor and scale apps — we're the fastest way to go from idea to URL, bypassing all those infrastructure headaches. Apps are transformative — apps are how customers now engage with companies. Developers are critical to app success. Heroku executes applications by running a command you specified in the Procfile, on a dyno that's been preloaded with your prepared slug (in fact, with your release, which extends your slug and a few items not yet defined: config vars and add-ons).
+
+Why is git called version controller?
+Version control is a system that records changes to a file or set of files over time so that you can recall specific versions later.Not only does Git offer the strongest feature set for developers, but it also has the most reliable workflow and is supported by the most third-party platforms on the market. One of the great things about Git is that it can be used on nearly any platform and with numerous repository systems.
+
+What is commit, branch and remote?
+Commit: A commit is a snapshot in time. Each commit contains a pointer to its root tree, representing the state of the working directory at that time. The commit has a list of parent commits corresponding to the previous snapshots.
+Branch: Branches allow you to develop features, fix bugs, or safely experiment with new ideas in a contained area of your repository. You always create a branch from an existing branch. Typically, you might create a new branch from the default branch of your repository. You can take advantage of branching when working on new features or bug fixes because it isolates your work from that of other team members. A git branch is an independent line of development taken from the same source code.
+Remote: A remote in Git is a common repository that all team members use to exchange their changes. The git remote set-url command changes an existing remote repository URL
+
+
+What does .gitignore file do?Why is it important?
+It ignores the files which will not be pushed to git especially .env
+
+Why don't we push node module to git?
+Consumes lot of space and package may not be up to date in future
+
+What happens when we restart the server?
+Restarting a server closes all the processes that are running and starts them again. Rebooting a server closes all running processes and reboots the server.
